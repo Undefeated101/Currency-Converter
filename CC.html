@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Conva - Currency Covertor</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="CC.css">
+</head>
+  <body>
+    <div class="container">
+            <h1 class="web-name">CONVA</h1>
+      <input type="number" id="price" value="1" onchange="change()" />
+      <select id="cur1" class="cur1" onchange="change()">
+        <option>AED</option>
+        <option>AFN</option>
+        <option>ALL</option>
+        <option>AMD</option>
+        <option>ANG</option>
+        <option>AOA</option>
+        <option>ARS</option>
+        <option>AUD</option>
+        <option>AWG</option>
+        <option>AZN</option>
+        <option>BAM</option>
+        <option>BBD</option>
+        <option>BDT</option>
+        <option>BGN</option>
+        <option>BIF</option>
+        <option>BMD</option>
+        <option>BND</option>
+        <option>BOB</option>
+        <option>BRL</option>
+        <option>BSD</option>
+        <option>BTN</option>
+        <option>BWP</option>
+        <option>BYN</option>
+        <option>BZD</option>
+        <option>CAD</option>
+        <option>CDF</option>
+        <option>CHF</option>
+        <option>CLP</option>
+        <option>CNY</option>
+        <option>COP</option>
+        <option>CRC</option>
+        <option>CUC</option>
+        <option>CUP</option>
+        <option>CVE</option>
+        <option>CZK</option>
+        <option>DJF</option>
+        <option>DKK</option>
+        <option>DOP</option>
+        <option>DZD</option>
+        <option>EGP</option>
+        <option>ERN</option>
+        <option>ETB</option>
+        <option>EUR</option>
+        <option>FJD</option>
+        <option>FKP</option>
+        <option>GBP</option>
+        <option>GEL</option>
+        <option>GGP</option>
+        <option>GHS</option>
+        <option>GIP</option>
+        <option>GMD</option>
+        <option>GNF</option>
+        <option>GTQ</option>
+        <option>GYD</option>
+        <option>HKD</option>
+        <option>HNL</option>
+        <option>HRK</option>
+        <option>HTG</option>
+        <option>HUF</option>
+        <option>IDR</option>
+        <option>ILS</option>
+        <option>IMP</option>
+        <option>INR</option>
+        <option>IQD</option>
+        <option>IRR</option>
+        <option>ISK</option>
+        <option>JEP</option>
+        <option>JMD</option>
+        <option>JOD</option>
+        <option>JPY</option>
+        <option>KES</option>
+        <option>KGS</option>
+        <option>KHR</option>
+        <option>KMF</option>
+        <option>KPW</option>
+        <option>KRW</option>
+        <option>KWD</option>
+        <option>KYD</option>
+        <option>KZT</option>
+        <option>LAK</option>
+        <option>LBP</option>
+        <option>LKR</option>
+        <option>LRD</option>
+        <option>LSL</option>
+        <option>LYD</option>
+        <option>MAD</option>
+        <option>MDL</option>
+        <option>MGA</option>
+        <option>MKD</option>
+        <option>MMK</option>
+        <option>MNT</option>
+        <option>MOP</option>
+        <option>MRU</option>
+        <option>MUR</option>
+        <option>MVR</option>
+        <option>MWK</option>
+        <option>MXN</option>
+        <option>MYR</option>
+        <option>MZN</option>
+        <option>NAD</option>
+        <option>NGN</option>
+        <option>NIO</option>
+        <option>NOK</option>
+        <option>NPR</option>
+        <option>NZD</option>
+        <option>OMR</option>
+        <option>PAB</option>
+        <option>PEN</option>
+        <option>PGK</option>
+        <option>PHP</option>
+        <option>PKR</option>
+        <option>PLN</option>
+        <option>PYG</option>
+        <option>QAR</option>
+        <option>RON</option>
+        <option>RSD</option>
+        <option>RUB</option>
+        <option>RWF</option>
+        <option>SAR</option>
+        <option>SBD</option>
+        <option>SDG</option>
+        <option>SEK</option>
+        <option>SGD</option>
+        <option>SHP</option>
+        <option>SLL</option>
+        <option>SOS</option>
+        <option>SPL</option>
+        <option>SRD</option>
+        <option>STN</option>
+        <option>SVC</option>
+        <option>SYP</option>
+        <option>SZL</option>
+        <option>THB</option>
+        <option>TJS</option>
+        <option>TMT</option>
+        <option>TND</option>
+        <option>TOP</option>
+        <option>TRY</option>
+        <option>TTD</option>
+        <option>TVD</option>
+        <option>TWD</option>
+        <option>TZS</option>
+        <option>UAH</option>
+        <option>UGX</option>
+        <option selected>USD</option>
+        <option>UYU</option>
+        <option>VEF</option>
+        <option>VES</option>
+        <option>VND</option>
+        <option>VUV</option>
+        <option>WST</option>
+        <option>XAF</option>
+        <option>XAG</option>
+        <option>XAU</option>
+        <option>XCD</option>
+        <option>XDR</option>
+        <option>XOF</option>
+        <option>XPD</option>
+        <option>XPF</option>
+        <option>XPT</option>
+        <option>YER</option>
+        <option>ZAR</option>
+        <option>ZMW</option>
+        <option>ZWD</option>
+      </select>
+      <select id="cur2" class="cur2" onchange="change()">
+        <option>AED</option>
+        <option>AFN</option>
+        <option>ALL</option>
+        <option>AMD</option>
+        <option>ANG</option>
+        <option>AOA</option>
+        <option>ARS</option>
+        <option>AUD</option>
+        <option>AWG</option>
+        <option>AZN</option>
+        <option>BAM</option>
+        <option>BBD</option>
+        <option>BDT</option>
+        <option>BGN</option>
+        <option>BIF</option>
+        <option>BMD</option>
+        <option>BND</option>
+        <option>BOB</option>
+        <option>BRL</option>
+        <option>BSD</option>
+        <option>BTN</option>
+        <option>BWP</option>
+        <option>BYN</option>
+        <option>BZD</option>
+        <option>CAD</option>
+        <option>CDF</option>
+        <option>CHF</option>
+        <option>CLP</option>
+        <option>CNY</option>
+        <option>COP</option>
+        <option>CRC</option>
+        <option>CUC</option>
+        <option>CUP</option>
+        <option>CVE</option>
+        <option>CZK</option>
+        <option>DJF</option>
+        <option>DKK</option>
+        <option>DOP</option>
+        <option>DZD</option>
+        <option>EGP</option>
+        <option>ERN</option>
+        <option>ETB</option>
+        <option>EUR</option>
+        <option>FJD</option>
+        <option>FKP</option>
+        <option>GBP</option>
+        <option>GEL</option>
+        <option>GGP</option>
+        <option>GHS</option>
+        <option>GIP</option>
+        <option>GMD</option>
+        <option>GNF</option>
+        <option>GTQ</option>
+        <option>GYD</option>
+        <option>HKD</option>
+        <option>HNL</option>
+        <option>HRK</option>
+        <option>HTG</option>
+        <option>HUF</option>
+        <option>IDR</option>
+        <option>ILS</option>
+        <option>IMP</option>
+        <option selected>INR</option>
+        <option>IQD</option>
+        <option>IRR</option>
+        <option>ISK</option>
+        <option>JEP</option>
+        <option>JMD</option>
+        <option>JOD</option>
+        <option>JPY</option>
+        <option>KES</option>
+        <option>KGS</option>
+        <option>KHR</option>
+        <option>KMF</option>
+        <option>KPW</option>
+        <option>KRW</option>
+        <option>KWD</option>
+        <option>KYD</option>
+        <option>KZT</option>
+        <option>LAK</option>
+        <option>LBP</option>
+        <option>LKR</option>
+        <option>LRD</option>
+        <option>LSL</option>
+        <option>LYD</option>
+        <option>MAD</option>
+        <option>MDL</option>
+        <option>MGA</option>
+        <option>MKD</option>
+        <option>MMK</option>
+        <option>MNT</option>
+        <option>MOP</option>
+        <option>MRU</option>
+        <option>MUR</option>
+        <option>MVR</option>
+        <option>MWK</option>
+        <option>MXN</option>
+        <option>MYR</option>
+        <option>MZN</option>
+        <option>NAD</option>
+        <option>NGN</option>
+        <option>NIO</option>
+        <option>NOK</option>
+        <option>NPR</option>
+        <option>NZD</option>
+        <option>OMR</option>
+        <option>PAB</option>
+        <option>PEN</option>
+        <option>PGK</option>
+        <option>PHP</option>
+        <option>PKR</option>
+        <option>PLN</option>
+        <option>PYG</option>
+        <option>QAR</option>
+        <option>RON</option>
+        <option>RSD</option>
+        <option>RUB</option>
+        <option>RWF</option>
+        <option>SAR</option>
+        <option>SBD</option>
+        <option>SDG</option>
+        <option>SEK</option>
+        <option>SGD</option>
+        <option>SHP</option>
+        <option>SLL</option>
+        <option>SOS</option>
+        <option>SPL</option>
+        <option>SRD</option>
+        <option>STN</option>
+        <option>SVC</option>
+        <option>SYP</option>
+        <option>SZL</option>
+        <option>THB</option>
+        <option>TJS</option>
+        <option>TMT</option>
+        <option>TND</option>
+        <option>TOP</option>
+        <option>TRY</option>
+        <option>TTD</option>
+        <option>TVD</option>
+        <option>TWD</option>
+        <option>TZS</option>
+        <option>UAH</option>
+        <option>UGX</option>
+        <option>USD</option>
+        <option>UYU</option>
+        <option>VEF</option>
+        <option>VES</option>
+        <option>VND</option>
+        <option>VUV</option>
+        <option>WST</option>
+        <option>XAF</option>
+        <option>XAG</option>
+        <option>XAU</option>
+        <option>XCD</option>
+        <option>XDR</option>
+        <option>XOF</option>
+        <option>XPD</option>
+        <option>XPF</option>
+        <option>XPT</option>
+        <option>YER</option>
+        <option>ZAR</option>
+        <option>ZMW</option>
+        <option>ZWD</option>
+      </select>
+      <h1 id="base">0000000000</h1>
+      <h1 id="value">000000000</h1>
+      <h1 id="convo">000000000</h1>
+      <h1 id="basetoconvounit" style="text-align: center;">0000000000</h1>
+      <h1 id="convotobaseunit" style="text-align: center;">0000000000</h1>
+    </div>
+    <script>change();
+            function change() {
+              var cur1 = $("#cur1 option:selected").html();
+              var cur2 = $("#cur2 option:selected").html();
+              var price = document.getElementById("price").value;
+              var apicall =
+                "https://free.currconv.com/api/v7/convert?q=" +
+                cur1 +
+                "_" +
+                cur2 +
+                "," +
+                cur2 +
+                "_" +
+                cur1 +
+                "&compact=ultra&apiKey=c11d4fa251d33218df0f";
+              $.getJSON(apicall, callBack);
+              function callBack(values) {
+                document.getElementById("value").innerHTML = (
+                  values[Object.keys(values)[0]] * price
+                ).toFixed(3);
+                document.getElementById("convo").innerHTML = cur2;
+                document.getElementById("base").innerHTML = price + " " + cur1 + " = ";
+                document.getElementById("basetoconvounit").innerHTML =
+                  "1 " +
+                  cur1 +
+                  " = " +
+                  values[Object.keys(values)[0]].toFixed(3) +
+                  " " +
+                  cur2;
+                  document.getElementById("convotobaseunit").innerHTML =
+                  "1 " +
+                  cur2 +
+                  " = " +
+                  values[Object.keys(values)[1]].toFixed(3) +
+                  " " +
+                  cur1;
+              }
+            }
+            </script>
+  </body>
+</html>
